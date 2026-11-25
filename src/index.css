@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0b1f3a;
+  --color-navy-800: #122c4f;
+  --color-navy-700: #1a3a63;
+  --color-navy-600: #234a7c;
+  --color-navy-50: #eef3f9;
+  --color-accent: #f97316;
+  --color-accent-dark: #ea580c;
+  --color-cream: #f7f4ef;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f7f4ef;
+  color: #0b1f3a;
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.input {
+  @apply w-full rounded-xl border border-navy/10 bg-white px-4 py-3 text-sm text-navy outline-none transition placeholder:text-navy/40 focus:border-accent focus:ring-2 focus:ring-accent/20;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-navy {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-700 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-navy/15 bg-white px-5 py-3 text-sm font-semibold text-navy transition hover:border-navy/30 hover:bg-navy-50;
+}
+
+.card {
+  @apply rounded-2xl border border-navy/8 bg-white shadow-[0_10px_40px_-24px_rgba(11,31,58,0.45)];
+}
